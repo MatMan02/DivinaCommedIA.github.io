@@ -34,7 +34,7 @@ function setNextQuestion() {
 
 function showQuestion(question) {
   questionElement.innerText = question.question
-  descriptionLivello.innerText = level + " di 5"
+  descriptionLivello.innerText = level + "di 5"
   question.answers.forEach(answer => {
     const button = document.createElement('button')
     button.innerText = answer.text

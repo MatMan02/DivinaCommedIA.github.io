@@ -4,7 +4,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const descriptionElement = document.getElementById('description')
-const descriptionLivello = document.getElementById('hide')
+const descriptionLivello = document.getElementById('livello')
 
 let shuffledQuestions, currentQuestionIndex, level
 descriptionElement.innerText = 'La Divina CommedIA\nTroverai nella prossima schermata due testi: uno sarà un estratto della Commedia di Dante, l\'altro sarà invece un testo generato da un\'Intelligenza Artificiale alla quale ho insegnato a scrivere come il Sommo Poeta.\nIl tuo compito sarà quello di riconoscere il testo originale.\nBuona fortuna!\n'

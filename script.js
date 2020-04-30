@@ -13,7 +13,6 @@ startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   level++
-  descriptionLivello.classList.remove('hide')
   setNextQuestion()
 })
 

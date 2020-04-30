@@ -28,7 +28,6 @@ function startGame() {
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
-  level++
 }
 
 function showQuestion(question) {
@@ -43,6 +42,7 @@ function showQuestion(question) {
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
+    level++
   })
 }
 

@@ -4,7 +4,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const descriptionElement = document.getElementById('description')
-const descriptionLivello = document.getElementById('livello')
+const descriptionLivello = document.getElementById('hide')
 
 let shuffledQuestions, currentQuestionIndex, level
 descriptionElement.innerText = 'La Divina CommedIA\nTroverai nella prossima schermata due testi: uno sarà un estratto della Commedia di Dante, l\'altro sarà invece un testo generato da un\'Intelligenza Artificiale alla quale ho insegnato a scrivere come il Sommo Poeta.\nIl tuo compito sarà quello di riconoscere il testo originale.\nBuona fortuna!\n'
@@ -12,12 +12,14 @@ descriptionElement.innerText = 'La Divina CommedIA\nTroverai nella prossima sche
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
+  level++
   setNextQuestion()
 })
 
 function startGame() {
   startButton.classList.add('hide')
   descriptionElement.classList.add('hide')
+  descriptionLivello.classList.remove('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   level = 1
@@ -72,7 +74,6 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
-    level++
   } else {
     element.classList.add('wrong')
   }

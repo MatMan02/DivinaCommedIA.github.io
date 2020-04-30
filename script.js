@@ -42,7 +42,6 @@ function showQuestion(question) {
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
-    level++
   })
 }
 
@@ -73,6 +72,7 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
+    level++
   } else {
     element.classList.add('wrong')
   }

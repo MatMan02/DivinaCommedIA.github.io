@@ -12,7 +12,6 @@ descriptionElement.innerText = 'La Divina CommedIA\nTroverai nella prossima sche
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
-  level++
   setNextQuestion()
 })
 
@@ -29,6 +28,7 @@ function startGame() {
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
+  level++
 }
 
 function showQuestion(question) {
